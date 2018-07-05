@@ -1,7 +1,7 @@
 config:
   target: "http://localhost:3000"
   phases:
-    - duration: 100 # lasts for 10 seconds
+    - duration: 10 # lasts for 10 seconds
       arrivalRate: 3 # 10 new users per second
   payload:
     path: "users.csv"
@@ -16,4 +16,4 @@ scenarios:
             json:
               type: "text"
               text: "U{{ uuid }}|M{{ $loopCount }}"
-        count: 50
+        count: 30
